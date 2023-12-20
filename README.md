@@ -17,7 +17,7 @@ Las tareas que debes realizar son las siguientes:
     - Implementa el método `validarPalo` comprobando que no sea nulo o lanzando la excepción adecuada.
     - Implementa el método `toString` que represente una carta de la forma: As de Oros, Dos de Copas, ..., Sota de Espadas, Caballo de Oros, Rey de Bastos.
 - Crea la clase `Baraja`:
-    - Declara e incializa la constante `NUM_CARTAS` que será igual a 48.
+    - Declara e incializa la constante `NUM_CARTAS` que será igual a 4 por las cartas de un palo.
     - Declara el atributo `mazo` que será un array de Cartas que tendrá como máximo `NUM_CARTAS`.
     - Implementa un constructor por defecto que inicialice el array poniendo en primer lugar las 12 cartas de oros, luego las 12 cartas de copas, luego las 12 cartas de espadas y finalmente las 12 cartas de bastos.
     - Implementa un método llamado `getCarta` que dada una posición devuelva la carta que ocupa dicha posición en la baraja. Debes validar que la posición indicada sea correcta, debiendo lanzar la excepción `IllegalArgumentException` con el mensaje adecuado.
