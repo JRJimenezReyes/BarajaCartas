@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Baraja {
     public static final int NUM_CARTAS = 4 * Carta.CARTAS_PALO;
-    private static final Random generador = new Random();
+    private static final Random GENERADOR = new Random();
 
     private final Carta[] mazo = new Carta[NUM_CARTAS];
 
@@ -33,7 +33,7 @@ public class Baraja {
             throw new IllegalArgumentException("Al menos hay que barajar una vez.");
         }
         for (int i = 0; i < veces; i++) {
-            intercambiar(generador.nextInt(NUM_CARTAS), generador.nextInt(NUM_CARTAS));
+            intercambiar(GENERADOR.nextInt(NUM_CARTAS), GENERADOR.nextInt(NUM_CARTAS));
         }
     }
 

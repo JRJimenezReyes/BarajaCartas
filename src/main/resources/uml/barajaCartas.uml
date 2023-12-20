@@ -76,7 +76,7 @@
                       <body>4 * Carta.CARTAS_PALO</body>
                     </defaultValue>
                   </ownedAttribute>
-                  <ownedAttribute xmi:type="uml:Property" xmi:id="_L_JysJ8SEe6CLux95g3Wwg" name="generador" visibility="private" isLeaf="true" isStatic="true" type="_9EFpMJ5vEe6EoIp-_cFZWg" isUnique="false">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_L_JysJ8SEe6CLux95g3Wwg" name="GENERADOR" visibility="private" isLeaf="true" isStatic="true" type="_9EFpMJ5vEe6EoIp-_cFZWg" isUnique="false" isReadOnly="true">
                     <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_L_JysZ8SEe6CLux95g3Wwg" name="defaultValue">
                       <language>JAVA</language>
                       <body>new Random()</body>
