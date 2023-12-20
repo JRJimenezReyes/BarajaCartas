@@ -11,14 +11,14 @@ Las tareas que debes realizar son las siguientes:
     - El método `toString` deberar serializarla con el nombre del palo comenzando en mayúscula y continando en minúsuclas.
 - Crea el registro `Carta`:
     - Los atributos serán: `numero` y `palo`.
-    - Declara e inicializa una constante como una array de cadenas con los nombres de los números.
+    - Declara e incializa la constante `CARTAS_PALO` que será igual a 12 y otra como una array de cadenas con los nombres de los números.
     - Implementa el constructor canónico que deberá validar el número y el palo, utilizando los métodos `validarNumero` y `validarPalo`.
-    - Implementa el método `validarNumero` que deberá validar el número (un entero entre 1 y 12 -será una constante perteneciente a la clase `Baraja`) o lanzará la excepción adecuada.
+    - Implementa el método `validarNumero` que deberá validar el número o lanzará la excepción adecuada.
     - Implementa el método `validarPalo` comprobando que no sea nulo o lanzando la excepción adecuada.
-    - Implementa el método `toString` que serialice una carta de la forma: As de Oros, Dos de Copas, ..., Sota de Espadas, Caballo de Oros, Rey de Bastos.
+    - Implementa el método `toString` que represente una carta de la forma: As de Oros, Dos de Copas, ..., Sota de Espadas, Caballo de Oros, Rey de Bastos.
 - Crea la clase `Baraja`:
-    - Tendrá dos constantes: `NUM_CARTAS` que será igual a 48 y `CARTAS_PALO` que será igual a 12.
-    - Añade como atributo `mazo` que será un array de Cartas que tendrá como máximo `NUM_CARTAS`.
+    - Declara e incializa la constante `NUM_CARTAS` que será igual a 48.
+    - Declara el atributo `mazo` que será un array de Cartas que tendrá como máximo `NUM_CARTAS`.
     - Implementa un constructor por defecto que inicialice el array poniendo en primer lugar las 12 cartas de oros, luego las 12 cartas de copas, luego las 12 cartas de espadas y finalmente las 12 cartas de bastos.
     - Implementa un método llamado `getCarta` que dada una posición devuelva la carta que ocupa dicha posición en la baraja. Debes validar que la posición indicada sea correcta, debiendo lanzar la excepción `IllegalArgumentException` con el mensaje adecuado.
     - Implementa un método llamado `intercambiar` que acepte las posiciónes de dos cartas y las intercambia en el array de cartas, es decir, en la posición primera pone la carta que ocupaba la posición segunda y viceversa. 

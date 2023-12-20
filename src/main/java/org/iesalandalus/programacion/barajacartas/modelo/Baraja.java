@@ -3,18 +3,17 @@ package org.iesalandalus.programacion.barajacartas.modelo;
 import java.util.Random;
 
 public class Baraja {
-    static final int CARTAS_PALO = 12;
-    public static final int NUM_CARTAS = 4 * CARTAS_PALO;
+    public static final int NUM_CARTAS = 4 * Carta.CARTAS_PALO;
     private static final Random generador = new Random();
 
     private final Carta[] mazo = new Carta[NUM_CARTAS];
 
     public Baraja() {
-        for (int i = 0; i < CARTAS_PALO; i++) {
+        for (int i = 0; i < Carta.CARTAS_PALO; i++) {
             mazo[i] = new Carta(i + 1, Palo.OROS);
-            mazo[CARTAS_PALO + i] = new Carta(i + 1, Palo.COPAS);
-            mazo[2 * CARTAS_PALO + i] = new Carta(i + 1, Palo.ESPADAS);
-            mazo[3 * CARTAS_PALO + i] = new Carta(i + 1, Palo.BASTOS);
+            mazo[Carta.CARTAS_PALO + i] = new Carta(i + 1, Palo.COPAS);
+            mazo[2 * Carta.CARTAS_PALO + i] = new Carta(i + 1, Palo.ESPADAS);
+            mazo[3 * Carta.CARTAS_PALO + i] = new Carta(i + 1, Palo.BASTOS);
         }
     }
 

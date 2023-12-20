@@ -11,16 +11,156 @@
           <packagedElement xmi:type="uml:Package" xmi:id="_ti96IZ5uEe6EoIp-_cFZWg" name="programacion">
             <packagedElement xmi:type="uml:Package" xmi:id="_ti-hMJ5uEe6EoIp-_cFZWg" name="barajacartas">
               <packagedElement xmi:type="uml:Package" xmi:id="_ti_IQJ5uEe6EoIp-_cFZWg" name="modelo">
-                <packagedElement xmi:type="uml:Association" xmi:id="_xgj7oJ5vEe6EoIp-_cFZWg" name="A_palo_carta" memberEnd="_mUAjoJ5vEe6EoIp-_cFZWg _xgpbMJ5vEe6EoIp-_cFZWg">
-                  <ownedEnd xmi:type="uml:Property" xmi:id="_xgpbMJ5vEe6EoIp-_cFZWg" name="carta" type="_mTRj0J5vEe6EoIp-_cFZWg" association="_xgj7oJ5vEe6EoIp-_cFZWg">
-                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xgqCQJ5vEe6EoIp-_cFZWg"/>
-                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xgqpUJ5vEe6EoIp-_cFZWg" value="1"/>
+                <packagedElement xmi:type="uml:Class" xmi:id="_IuZMkJ8SEe6CLux95g3Wwg" name="Carta" visibility="public">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_IvG-QJ8SEe6CLux95g3Wwg" name="CARTAS_PALO" visibility="package" isLeaf="true" isStatic="true" type="_BDG_gJ6cEe6ldsN1uOyRZw" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_IvKBkJ8SEe6CLux95g3Wwg" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>12</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_IvRWUJ8SEe6CLux95g3Wwg" name="NOMBRES_NUMEROS" visibility="private" isLeaf="true" isStatic="true" type="_tjih4J5uEe6EoIp-_cFZWg" isUnique="false">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IvTykJ8SEe6CLux95g3Wwg"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IvVAsJ8SEe6CLux95g3Wwg" value="*"/>
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_IvWO0J8SEe6CLux95g3Wwg" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>{ &quot;As&quot;, &quot;Dos&quot;, &quot;Tres&quot;, &quot;Cuatro&quot;, &quot;Cinco&quot;, &quot;Seis&quot;, &quot;Siete&quot;, &quot;Ocho&quot;, &quot;Nueve&quot;, &quot;Sota&quot;, &quot;Caballo&quot;, &quot;Rey&quot; }</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_IvYEAJ8SEe6CLux95g3Wwg" name="numero" visibility="private" type="_BDG_gJ6cEe6ldsN1uOyRZw" isUnique="false"/>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_IvpJwJ8SEe6CLux95g3Wwg" name="palo" visibility="private" type="_tjF18J5uEe6EoIp-_cFZWg" isUnique="false" aggregation="composite" association="_fHFs4J8SEe6CLux95g3Wwg"/>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Iv5ocJ8SEe6CLux95g3Wwg" name="Carta" specification="_Ivs0IJ8SEe6CLux95g3Wwg">
+                    <language>JAVA</language>
+                    <body>
+    validarNumero(numero);
+    validarPalo(palo);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_IwA9MJ8SEe6CLux95g3Wwg" name="validarNumero" specification="_Iv9S0J8SEe6CLux95g3Wwg">
+                    <language>JAVA</language>
+                    <body>
+    if (numero &lt; 1 || numero > CARTAS_PALO) {
+        throw new IllegalArgumentException(&quot;El número de la carta no es correcto.&quot;);
+    }
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_IwKuMJ8SEe6CLux95g3Wwg" name="validarPalo" specification="_IwHq4J8SEe6CLux95g3Wwg">
+                    <language>JAVA</language>
+                    <body>
+    Objects.requireNonNull(palo, &quot;El palo no puede ser nulo.&quot;);
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_IwO_oJ8SEe6CLux95g3Wwg" name="toString" specification="_IwL8UJ8SEe6CLux95g3Wwg">
+                    <language>JAVA</language>
+                    <body>
+    return String.format(&quot;%s de %s&quot;, NOMBRES_NUMEROS[numero - 1], palo);
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_Ivs0IJ8SEe6CLux95g3Wwg" name="Carta" visibility="public" method="_Iv5ocJ8SEe6CLux95g3Wwg">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Iv1XAJ8SEe6CLux95g3Wwg" name="numero" type="_BDG_gJ6cEe6ldsN1uOyRZw"/>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Iv3zQJ8SEe6CLux95g3Wwg" name="palo" type="_tjF18J5uEe6EoIp-_cFZWg"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_Iv9S0J8SEe6CLux95g3Wwg" name="validarNumero" visibility="private" method="_IwA9MJ8SEe6CLux95g3Wwg">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_Iv_IAJ8SEe6CLux95g3Wwg" name="numero" type="_BDG_gJ6cEe6ldsN1uOyRZw"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_IwHq4J8SEe6CLux95g3Wwg" name="validarPalo" visibility="private" method="_IwKuMJ8SEe6CLux95g3Wwg">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_IwI5AJ8SEe6CLux95g3Wwg" name="palo" type="_tjF18J5uEe6EoIp-_cFZWg"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_IwL8UJ8SEe6CLux95g3Wwg" name="toString" visibility="public" method="_IwO_oJ8SEe6CLux95g3Wwg">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_IwMjYJ8SEe6CLux95g3Wwg" type="_tjih4J5uEe6EoIp-_cFZWg" direction="return"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Class" xmi:id="_L_FhQJ8SEe6CLux95g3Wwg" name="Baraja" visibility="public">
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_L_HWcJ8SEe6CLux95g3Wwg" name="NUM_CARTAS" visibility="public" isLeaf="true" isStatic="true" type="_BDG_gJ6cEe6ldsN1uOyRZw" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_L_H9gJ8SEe6CLux95g3Wwg" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>4 * Carta.CARTAS_PALO</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_L_JysJ8SEe6CLux95g3Wwg" name="generador" visibility="private" isLeaf="true" isStatic="true" type="_9EFpMJ5vEe6EoIp-_cFZWg" isUnique="false">
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_L_JysZ8SEe6CLux95g3Wwg" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>new Random()</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedAttribute xmi:type="uml:Property" xmi:id="_L_P5UJ8SEe6CLux95g3Wwg" name="mazo" visibility="private" isLeaf="true" type="_IuZMkJ8SEe6CLux95g3Wwg" isUnique="false" aggregation="composite" association="_Dg7MsJ8TEe6CLux95g3Wwg">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L_QgYJ8SEe6CLux95g3Wwg"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L_QgYZ8SEe6CLux95g3Wwg" value="*"/>
+                    <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_L_RHcJ8SEe6CLux95g3Wwg" name="defaultValue">
+                      <language>JAVA</language>
+                      <body>new Carta[NUM_CARTAS]</body>
+                    </defaultValue>
+                  </ownedAttribute>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_L_V_8J8SEe6CLux95g3Wwg" name="Baraja" specification="_L_RHcZ8SEe6CLux95g3Wwg">
+                    <language>JAVA</language>
+                    <body>
+    for (int i = 0; i &lt; Carta.CARTAS_PALO; i++) {
+        mazo[i] = new Carta(i + 1, Palo.OROS);
+        mazo[Carta.CARTAS_PALO + i] = new Carta(i + 1, Palo.COPAS);
+        mazo[2 * Carta.CARTAS_PALO + i] = new Carta(i + 1, Palo.ESPADAS);
+        mazo[3 * Carta.CARTAS_PALO + i] = new Carta(i + 1, Palo.BASTOS);
+    }
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_L_ZDQJ8SEe6CLux95g3Wwg" name="getCarta" specification="_L_XOEJ8SEe6CLux95g3Wwg">
+                    <language>JAVA</language>
+                    <body>
+    comprobarPosicion(posicion);
+    return mazo[posicion];
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_L_bfgJ8SEe6CLux95g3Wwg" name="comprobarPosicion" specification="_L_aRYJ8SEe6CLux95g3Wwg">
+                    <language>JAVA</language>
+                    <body>
+    if (posicion &lt; 0 || posicion >= NUM_CARTAS) {
+        throw new IllegalArgumentException(&quot;La posición no está dentro del mazo.&quot;);
+    }
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_L_ei0J8SEe6CLux95g3Wwg" name="barajar" specification="_L_ctoJ8SEe6CLux95g3Wwg">
+                    <language>JAVA</language>
+                    <body>
+    if (veces &lt;= 0) {
+        throw new IllegalArgumentException(&quot;Al menos hay que barajar una vez.&quot;);
+    }
+    for (int i = 0; i &lt; veces; i++) {
+        intercambiar(generador.nextInt(NUM_CARTAS), generador.nextInt(NUM_CARTAS));
+    }
+</body>
+                  </ownedBehavior>
+                  <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_L_i0QJ8SEe6CLux95g3Wwg" name="intercambiar" specification="_L_fw8J8SEe6CLux95g3Wwg">
+                    <language>JAVA</language>
+                    <body>
+    Carta aux = mazo[posicion1];
+    mazo[posicion1] = mazo[posicion2];
+    mazo[posicion2] = aux;
+</body>
+                  </ownedBehavior>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_L_RHcZ8SEe6CLux95g3Wwg" name="Baraja" visibility="public" method="_L_V_8J8SEe6CLux95g3Wwg"/>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_L_XOEJ8SEe6CLux95g3Wwg" name="getCarta" visibility="public" method="_L_ZDQJ8SEe6CLux95g3Wwg">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_L_X1IJ8SEe6CLux95g3Wwg" type="_IuZMkJ8SEe6CLux95g3Wwg" direction="return"/>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_L_YcMJ8SEe6CLux95g3Wwg" name="posicion" type="_BDG_gJ6cEe6ldsN1uOyRZw"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_L_aRYJ8SEe6CLux95g3Wwg" name="comprobarPosicion" visibility="private" method="_L_bfgJ8SEe6CLux95g3Wwg">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_L_a4cJ8SEe6CLux95g3Wwg" name="posicion" type="_BDG_gJ6cEe6ldsN1uOyRZw"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_L_ctoJ8SEe6CLux95g3Wwg" name="barajar" visibility="public" method="_L_ei0J8SEe6CLux95g3Wwg">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_L_d7wJ8SEe6CLux95g3Wwg" name="veces" type="_BDG_gJ6cEe6ldsN1uOyRZw"/>
+                  </ownedOperation>
+                  <ownedOperation xmi:type="uml:Operation" xmi:id="_L_fw8J8SEe6CLux95g3Wwg" name="intercambiar" visibility="private" method="_L_i0QJ8SEe6CLux95g3Wwg">
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_L_g_EJ8SEe6CLux95g3Wwg" name="posicion1" type="_BDG_gJ6cEe6ldsN1uOyRZw"/>
+                    <ownedParameter xmi:type="uml:Parameter" xmi:id="_L_iNMJ8SEe6CLux95g3Wwg" name="posicion2" type="_BDG_gJ6cEe6ldsN1uOyRZw"/>
+                  </ownedOperation>
+                </packagedElement>
+                <packagedElement xmi:type="uml:Association" xmi:id="_fHFs4J8SEe6CLux95g3Wwg" name="A_palo_carta" memberEnd="_IvpJwJ8SEe6CLux95g3Wwg _fHKlYJ8SEe6CLux95g3Wwg">
+                  <ownedEnd xmi:type="uml:Property" xmi:id="_fHKlYJ8SEe6CLux95g3Wwg" name="carta" type="_IuZMkJ8SEe6CLux95g3Wwg" association="_fHFs4J8SEe6CLux95g3Wwg">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fHLMcJ8SEe6CLux95g3Wwg"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fHLzgJ8SEe6CLux95g3Wwg" value="1"/>
                   </ownedEnd>
                 </packagedElement>
-                <packagedElement xmi:type="uml:Association" xmi:id="_Qe41AJ5wEe6EoIp-_cFZWg" name="A_mazo_baraja" memberEnd="_9ETEkJ5vEe6EoIp-_cFZWg _Qe8fYJ5wEe6EoIp-_cFZWg">
-                  <ownedEnd xmi:type="uml:Property" xmi:id="_Qe8fYJ5wEe6EoIp-_cFZWg" name="baraja" type="_9EAwsJ5vEe6EoIp-_cFZWg" association="_Qe41AJ5wEe6EoIp-_cFZWg">
-                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Qe9GcJ5wEe6EoIp-_cFZWg"/>
-                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Qe9tgJ5wEe6EoIp-_cFZWg" value="1"/>
+                <packagedElement xmi:type="uml:Association" xmi:id="_Dg7MsJ8TEe6CLux95g3Wwg" name="A_mazo_baraja" memberEnd="_L_P5UJ8SEe6CLux95g3Wwg _Dg9o8J8TEe6CLux95g3Wwg">
+                  <ownedEnd xmi:type="uml:Property" xmi:id="_Dg9o8J8TEe6CLux95g3Wwg" name="baraja" type="_L_FhQJ8SEe6CLux95g3Wwg" association="_Dg7MsJ8TEe6CLux95g3Wwg">
+                    <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Dg-QAJ8TEe6CLux95g3Wwg"/>
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Dg-QAZ8TEe6CLux95g3Wwg" value="1"/>
                   </ownedEnd>
                 </packagedElement>
               </packagedElement>
@@ -86,7 +226,7 @@
       <packagedElement xmi:type="uml:Package" xmi:id="_mT3ZsJ5vEe6EoIp-_cFZWg" name="primitivetype">
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_mT3ZsZ5vEe6EoIp-_cFZWg" name="int"/>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QrfRIJ5xEe6EoIp-_cFZWg" name="int"/>
-        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_BDG_gJ6cEe6ldsN1uOyRZw" name="Integer"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_BDG_gJ6cEe6ldsN1uOyRZw" name="int"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_QrhGUJ5xEe6EoIp-_cFZWg" name="org">
         <packagedElement xmi:type="uml:Package" xmi:id="_QrhtYJ5xEe6EoIp-_cFZWg" name="iesalandalus">
@@ -133,146 +273,6 @@
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tjLVgJ5uEe6EoIp-_cFZWg" name="ESPADAS"/>
           <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tjL8kJ5uEe6EoIp-_cFZWg" name="BASTOS"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_mTRj0J5vEe6EoIp-_cFZWg" name="Carta" visibility="public">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_mTUAEJ5vEe6EoIp-_cFZWg" name="NOMBRES_NUMEROS" visibility="private" isLeaf="true" isStatic="true" type="_tjih4J5uEe6EoIp-_cFZWg" isUnique="false">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mTWcUJ5vEe6EoIp-_cFZWg"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mTXDYJ5vEe6EoIp-_cFZWg" value="*"/>
-            <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_mTXqcJ5vEe6EoIp-_cFZWg" name="defaultValue">
-              <language>JAVA</language>
-              <body>{ &quot;As&quot;, &quot;Dos&quot;, &quot;Tres&quot;, &quot;Cuatro&quot;, &quot;Cinco&quot;, &quot;Seis&quot;, &quot;Siete&quot;, &quot;Ocho&quot;, &quot;Nueve&quot;, &quot;Sota&quot;, &quot;Caballo&quot;, &quot;Rey&quot; }</body>
-            </defaultValue>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_mT4AwJ5vEe6EoIp-_cFZWg" name="numero" visibility="private" type="_mT3ZsZ5vEe6EoIp-_cFZWg" isUnique="false"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_mUAjoJ5vEe6EoIp-_cFZWg" name="palo" visibility="private" type="_tjF18J5uEe6EoIp-_cFZWg" isUnique="false" aggregation="composite" association="_xgj7oJ5vEe6EoIp-_cFZWg"/>
-          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mUSQcJ5vEe6EoIp-_cFZWg" name="Carta" specification="_mUCY0J5vEe6EoIp-_cFZWg">
-            <language>JAVA</language>
-            <body>
-    validarNumero(numero);
-    validarPalo(palo);
-</body>
-          </ownedBehavior>
-          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mUV60J5vEe6EoIp-_cFZWg" name="validarNumero" specification="_mUUFoJ5vEe6EoIp-_cFZWg">
-            <language>JAVA</language>
-            <body>
-    if (numero &lt; 1 || numero > Baraja.CARTAS_PALO) {
-        throw new IllegalArgumentException(&quot;El número de la carta no es correcto.&quot;);
-    }
-</body>
-          </ownedBehavior>
-          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mUY-IJ5vEe6EoIp-_cFZWg" name="validarPalo" specification="_mUXI8J5vEe6EoIp-_cFZWg">
-            <language>JAVA</language>
-            <body>
-    Objects.requireNonNull(palo, &quot;El palo no puede ser nulo.&quot;);
-</body>
-          </ownedBehavior>
-          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_mUbaYJ5vEe6EoIp-_cFZWg" name="toString" specification="_mUZlMJ5vEe6EoIp-_cFZWg">
-            <language>JAVA</language>
-            <body>
-    return String.format(&quot;%s de %s&quot;, NOMBRES_NUMEROS[numero - 1], palo);
-</body>
-          </ownedBehavior>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_mUCY0J5vEe6EoIp-_cFZWg" name="Carta" visibility="public" method="_mUSQcJ5vEe6EoIp-_cFZWg">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mULiwJ5vEe6EoIp-_cFZWg" name="numero" type="_mT3ZsZ5vEe6EoIp-_cFZWg"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mUMw4J5vEe6EoIp-_cFZWg" name="palo" type="_tjF18J5uEe6EoIp-_cFZWg"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_mUUFoJ5vEe6EoIp-_cFZWg" name="validarNumero" visibility="private" method="_mUV60J5vEe6EoIp-_cFZWg">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mUVTwJ5vEe6EoIp-_cFZWg" name="numero" type="_mT3ZsZ5vEe6EoIp-_cFZWg"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_mUXI8J5vEe6EoIp-_cFZWg" name="validarPalo" visibility="private" method="_mUY-IJ5vEe6EoIp-_cFZWg">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mUYXEJ5vEe6EoIp-_cFZWg" name="palo" type="_tjF18J5uEe6EoIp-_cFZWg"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_mUZlMJ5vEe6EoIp-_cFZWg" name="toString" visibility="public" method="_mUbaYJ5vEe6EoIp-_cFZWg">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mUazUJ5vEe6EoIp-_cFZWg" type="_tjih4J5uEe6EoIp-_cFZWg" direction="return"/>
-          </ownedOperation>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_9EAwsJ5vEe6EoIp-_cFZWg" name="Baraja" visibility="public">
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_9EB-0J5vEe6EoIp-_cFZWg" name="CARTAS_PALO" visibility="package" isLeaf="true" isStatic="true" type="_mT3ZsZ5vEe6EoIp-_cFZWg" isUnique="false">
-            <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_9EDM8J5vEe6EoIp-_cFZWg" name="defaultValue">
-              <language>JAVA</language>
-              <body>12</body>
-            </defaultValue>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_9ED0AJ5vEe6EoIp-_cFZWg" name="NUM_CARTAS" visibility="public" isLeaf="true" isStatic="true" type="_mT3ZsZ5vEe6EoIp-_cFZWg" isUnique="false">
-            <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_9EEbEJ5vEe6EoIp-_cFZWg" name="defaultValue">
-              <language>JAVA</language>
-              <body>4 * CARTAS_PALO</body>
-            </defaultValue>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_9ENlAJ5vEe6EoIp-_cFZWg" name="generador" visibility="private" isLeaf="true" isStatic="true" type="_9EFpMJ5vEe6EoIp-_cFZWg" isUnique="false">
-            <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_9EOMEJ5vEe6EoIp-_cFZWg" name="defaultValue">
-              <language>JAVA</language>
-              <body>new Random()</body>
-            </defaultValue>
-          </ownedAttribute>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_9ETEkJ5vEe6EoIp-_cFZWg" name="mazo" visibility="private" isLeaf="true" type="_mTRj0J5vEe6EoIp-_cFZWg" isUnique="false" aggregation="composite" association="_Qe41AJ5wEe6EoIp-_cFZWg">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9ETroJ5vEe6EoIp-_cFZWg"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9ETroZ5vEe6EoIp-_cFZWg" value="*"/>
-            <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_9ETrop5vEe6EoIp-_cFZWg" name="defaultValue">
-              <language>JAVA</language>
-              <body>new Carta[NUM_CARTAS]</body>
-            </defaultValue>
-          </ownedAttribute>
-          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EaZUJ5vEe6EoIp-_cFZWg" name="Baraja" specification="_9EUSsJ5vEe6EoIp-_cFZWg">
-            <language>JAVA</language>
-            <body>
-    for (int i = 0; i &lt; CARTAS_PALO; i++) {
-        mazo[i] = new Carta(i + 1, Palo.OROS);
-        mazo[CARTAS_PALO + i] = new Carta(i + 1, Palo.COPAS);
-        mazo[2 * CARTAS_PALO + i] = new Carta(i + 1, Palo.ESPADAS);
-        mazo[3 * CARTAS_PALO + i] = new Carta(i + 1, Palo.BASTOS);
-    }
-</body>
-          </ownedBehavior>
-          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9EeDsJ5vEe6EoIp-_cFZWg" name="getCarta" specification="_9EbncJ5vEe6EoIp-_cFZWg">
-            <language>JAVA</language>
-            <body>
-    comprobarPosicion(posicion);
-    return mazo[posicion];
-</body>
-          </ownedBehavior>
-          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Ef44J5vEe6EoIp-_cFZWg" name="comprobarPosicion" specification="_9EeqwJ5vEe6EoIp-_cFZWg">
-            <language>JAVA</language>
-            <body>
-    if (posicion &lt; 0 || posicion >= NUM_CARTAS) {
-        throw new IllegalArgumentException(&quot;La posición no está dentro del mazo.&quot;);
-    }
-</body>
-          </ownedBehavior>
-          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9Ei8MJ5vEe6EoIp-_cFZWg" name="barajar" specification="_9EhHAJ5vEe6EoIp-_cFZWg">
-            <language>JAVA</language>
-            <body>
-    if (veces &lt;= 0) {
-        throw new IllegalArgumentException(&quot;Al menos hay que barajar una vez.&quot;);
-    }
-    for (int i = 0; i &lt; veces; i++) {
-        intercambiar(generador.nextInt(NUM_CARTAS), generador.nextInt(NUM_CARTAS));
-    }
-</body>
-          </ownedBehavior>
-          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_9ElYcJ5vEe6EoIp-_cFZWg" name="intercambiar" specification="_9EjjQJ5vEe6EoIp-_cFZWg">
-            <language>JAVA</language>
-            <body>
-    Carta aux = mazo[posicion1];
-    mazo[posicion1] = mazo[posicion2];
-    mazo[posicion2] = aux;
-</body>
-          </ownedBehavior>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_9EUSsJ5vEe6EoIp-_cFZWg" name="Baraja" visibility="public" method="_9EaZUJ5vEe6EoIp-_cFZWg"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_9EbncJ5vEe6EoIp-_cFZWg" name="getCarta" visibility="public" method="_9EeDsJ5vEe6EoIp-_cFZWg">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_9EcOgJ5vEe6EoIp-_cFZWg" type="_mTRj0J5vEe6EoIp-_cFZWg" direction="return"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_9EdcoJ5vEe6EoIp-_cFZWg" name="posicion" type="_mT3ZsZ5vEe6EoIp-_cFZWg"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_9EeqwJ5vEe6EoIp-_cFZWg" name="comprobarPosicion" visibility="private" method="_9Ef44J5vEe6EoIp-_cFZWg">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_9EfR0J5vEe6EoIp-_cFZWg" name="posicion" type="_mT3ZsZ5vEe6EoIp-_cFZWg"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_9EhHAJ5vEe6EoIp-_cFZWg" name="barajar" visibility="public" method="_9Ei8MJ5vEe6EoIp-_cFZWg">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_9EhuEJ5vEe6EoIp-_cFZWg" name="veces" type="_mT3ZsZ5vEe6EoIp-_cFZWg"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_9EjjQJ5vEe6EoIp-_cFZWg" name="intercambiar" visibility="private" method="_9ElYcJ5vEe6EoIp-_cFZWg">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_9EkKUJ5vEe6EoIp-_cFZWg" name="posicion1" type="_mT3ZsZ5vEe6EoIp-_cFZWg"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_9EkxYJ5vEe6EoIp-_cFZWg" name="posicion2" type="_mT3ZsZ5vEe6EoIp-_cFZWg"/>
-          </ownedOperation>
-        </packagedElement>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Sfo2sJ5uEe6a07fD2MpKFw">
@@ -309,11 +309,11 @@
   </uml:Model>
   <Codegen:External xmi:id="_tpHlcJ5uEe6EoIp-_cFZWg" name="java.lang.String" base_Classifier="_tjih4J5uEe6EoIp-_cFZWg"/>
   <Codegen:External xmi:id="_mT-ucJ5vEe6EoIp-_cFZWg" name="Palo" base_Classifier="_tjF18J5uEe6EoIp-_cFZWg"/>
-  <standard:Create xmi:id="_mUJtkJ5vEe6EoIp-_cFZWg" base_BehavioralFeature="_mUCY0J5vEe6EoIp-_cFZWg"/>
   <Codegen:External xmi:id="_9EKhsJ5vEe6EoIp-_cFZWg" name="java.util.Random" base_Classifier="_9EFpMJ5vEe6EoIp-_cFZWg"/>
-  <Codegen:External xmi:id="_9ER2cJ5vEe6EoIp-_cFZWg" name="Carta" base_Classifier="_mTRj0J5vEe6EoIp-_cFZWg"/>
-  <standard:Create xmi:id="_9EYkIJ5vEe6EoIp-_cFZWg" base_BehavioralFeature="_9EUSsJ5vEe6EoIp-_cFZWg"/>
-  <record:Record xmi:id="_GWQ_MJ5wEe6EoIp-_cFZWg" base_Class="_mTRj0J5vEe6EoIp-_cFZWg"/>
   <Codegen:External xmi:id="_QrnM8J5xEe6EoIp-_cFZWg" name="org.iesalandalus.programacion.barajacartas.modelo.Baraja" base_Classifier="_Qri7gJ5xEe6EoIp-_cFZWg"/>
   <standard:Create xmi:id="_BCkM8J6cEe6ldsN1uOyRZw" base_BehavioralFeature="_BCab8J6cEe6ldsN1uOyRZw"/>
+  <standard:Create xmi:id="_IvyTsJ8SEe6CLux95g3Wwg" base_BehavioralFeature="_Ivs0IJ8SEe6CLux95g3Wwg"/>
+  <Codegen:External xmi:id="_L_OrMJ8SEe6CLux95g3Wwg" name="Carta" base_Classifier="_IuZMkJ8SEe6CLux95g3Wwg"/>
+  <standard:Create xmi:id="_L_Ux0J8SEe6CLux95g3Wwg" base_BehavioralFeature="_L_RHcZ8SEe6CLux95g3Wwg"/>
+  <record:Record xmi:id="_uOtzUJ8SEe6CLux95g3Wwg" base_Class="_IuZMkJ8SEe6CLux95g3Wwg"/>
 </xmi:XMI>
