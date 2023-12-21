@@ -145,6 +145,13 @@
                   <layoutConstraint xmi:type="notation:Location" xmi:id="_V7I6sZ8SEe6CLux95g3Wwg"/>
                 </children>
                 <children xmi:type="notation:Shape" xmi:id="_V7KI0J8SEe6CLux95g3Wwg" type="Property_ClassAttributeLabel">
+                  <styles xmi:type="notation:StringListValueStyle" xmi:id="_1hIoQJ_nEe6vB9r8m5Uysw" name="maskLabel">
+                    <stringListValue>multiplicity</stringListValue>
+                    <stringListValue>visibility</stringListValue>
+                    <stringListValue>name</stringListValue>
+                    <stringListValue>type</stringListValue>
+                    <stringListValue>derived</stringListValue>
+                  </styles>
                   <element xmi:type="uml:Property" href="barajaCartas.uml#_IvRWUJ8SEe6CLux95g3Wwg"/>
                   <layoutConstraint xmi:type="notation:Location" xmi:id="_V7KI0Z8SEe6CLux95g3Wwg"/>
                 </children>
@@ -310,21 +317,21 @@
               <element xmi:type="uml:Class" href="barajaCartas.uml#_L_FhQJ8SEe6CLux95g3Wwg"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L_kCYZ8SEe6CLux95g3Wwg" x="701" y="50"/>
             </children>
-            <children xmi:type="notation:Shape" xmi:id="_xwXlEJ8mEe61Zqu2o5EMvA" type="StereotypeComment">
-              <styles xmi:type="notation:TitleStyle" xmi:id="_xwXlEZ8mEe61Zqu2o5EMvA"/>
-              <styles xmi:type="notation:EObjectValueStyle" xmi:id="_xwXlE58mEe61Zqu2o5EMvA" name="BASE_ELEMENT">
+            <children xmi:type="notation:Shape" xmi:id="_yf8IIJ_nEe6vB9r8m5Uysw" type="StereotypeComment">
+              <styles xmi:type="notation:TitleStyle" xmi:id="_yf8IIZ_nEe6vB9r8m5Uysw"/>
+              <styles xmi:type="notation:EObjectValueStyle" xmi:id="_yf8II5_nEe6vB9r8m5Uysw" name="BASE_ELEMENT">
                 <eObjectValue xmi:type="uml:Enumeration" href="barajaCartas.uml#_tjF18J5uEe6EoIp-_cFZWg"/>
               </styles>
               <element xsi:nil="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwXlEp8mEe61Zqu2o5EMvA" x="254" y="82"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yf8IIp_nEe6vB9r8m5Uysw" x="254" y="82"/>
             </children>
-            <children xmi:type="notation:Shape" xmi:id="_xwzC4J8mEe61Zqu2o5EMvA" type="StereotypeComment">
-              <styles xmi:type="notation:TitleStyle" xmi:id="_xwzC4Z8mEe61Zqu2o5EMvA"/>
-              <styles xmi:type="notation:EObjectValueStyle" xmi:id="_xwzC458mEe61Zqu2o5EMvA" name="BASE_ELEMENT">
+            <children xmi:type="notation:Shape" xmi:id="_ygOcAJ_nEe6vB9r8m5Uysw" type="StereotypeComment">
+              <styles xmi:type="notation:TitleStyle" xmi:id="_ygOcAZ_nEe6vB9r8m5Uysw"/>
+              <styles xmi:type="notation:EObjectValueStyle" xmi:id="_ygOcA5_nEe6vB9r8m5Uysw" name="BASE_ELEMENT">
                 <eObjectValue xmi:type="uml:Class" href="barajaCartas.uml#_IuZMkJ8SEe6CLux95g3Wwg"/>
               </styles>
               <element xsi:nil="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwzC4p8mEe61Zqu2o5EMvA" x="521" y="42"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ygOcAp_nEe6vB9r8m5Uysw" x="521" y="42"/>
             </children>
             <styles xmi:type="notation:TitleStyle" xmi:id="_yAQ58p5wEe6EoIp-_cFZWg"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yAQ5855wEe6EoIp-_cFZWg"/>
@@ -420,25 +427,25 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nOXgkJ8TEe6CLux95g3Wwg" id="(0.0,0.44021739130434784)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nOYHoJ8TEe6CLux95g3Wwg" id="(1.0,0.4427860696517413)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_xwYMIJ8mEe61Zqu2o5EMvA" type="StereotypeCommentLink" source="_tprmIJ5uEe6EoIp-_cFZWg" target="_xwXlEJ8mEe61Zqu2o5EMvA">
-      <styles xmi:type="notation:FontStyle" xmi:id="_xwYMIZ8mEe61Zqu2o5EMvA"/>
-      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_xwYzMp8mEe61Zqu2o5EMvA" name="BASE_ELEMENT">
+    <edges xmi:type="notation:Connector" xmi:id="_yf8IJJ_nEe6vB9r8m5Uysw" type="StereotypeCommentLink" source="_tprmIJ5uEe6EoIp-_cFZWg" target="_yf8IIJ_nEe6vB9r8m5Uysw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_yf8IJZ_nEe6vB9r8m5Uysw"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_yf8vMZ_nEe6vB9r8m5Uysw" name="BASE_ELEMENT">
         <eObjectValue xmi:type="uml:Enumeration" href="barajaCartas.uml#_tjF18J5uEe6EoIp-_cFZWg"/>
       </styles>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xwYMIp8mEe61Zqu2o5EMvA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xwYzMJ8mEe61Zqu2o5EMvA"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xwYzMZ8mEe61Zqu2o5EMvA"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yf8IJp_nEe6vB9r8m5Uysw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yf8IJ5_nEe6vB9r8m5Uysw"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yf8vMJ_nEe6vB9r8m5Uysw"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_xwzp8J8mEe61Zqu2o5EMvA" type="StereotypeCommentLink" source="_IwVGQJ8SEe6CLux95g3Wwg" target="_xwzC4J8mEe61Zqu2o5EMvA">
-      <styles xmi:type="notation:FontStyle" xmi:id="_xwzp8Z8mEe61Zqu2o5EMvA"/>
-      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_xwzp9Z8mEe61Zqu2o5EMvA" name="BASE_ELEMENT">
+    <edges xmi:type="notation:Connector" xmi:id="_ygOcBJ_nEe6vB9r8m5Uysw" type="StereotypeCommentLink" source="_IwVGQJ8SEe6CLux95g3Wwg" target="_ygOcAJ_nEe6vB9r8m5Uysw">
+      <styles xmi:type="notation:FontStyle" xmi:id="_ygOcBZ_nEe6vB9r8m5Uysw"/>
+      <styles xmi:type="notation:EObjectValueStyle" xmi:id="_ygPDEp_nEe6vB9r8m5Uysw" name="BASE_ELEMENT">
         <eObjectValue xmi:type="uml:Class" href="barajaCartas.uml#_IuZMkJ8SEe6CLux95g3Wwg"/>
       </styles>
       <element xsi:nil="true"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xwzp8p8mEe61Zqu2o5EMvA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xwzp858mEe61Zqu2o5EMvA"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xwzp9J8mEe61Zqu2o5EMvA"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ygOcBp_nEe6vB9r8m5Uysw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ygPDEJ_nEe6vB9r8m5Uysw"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ygPDEZ_nEe6vB9r8m5Uysw"/>
     </edges>
   </notation:Diagram>
   <css:StyleSheetReference xmi:id="_yIkMQJ5uEe6EoIp-_cFZWg" path="/BarajaCartas/src/main/resources/uml/MiEstilo.css"/>
